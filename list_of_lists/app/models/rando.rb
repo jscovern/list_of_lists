@@ -1,0 +1,2 @@
+class Rando < ApplicationRecord
+end

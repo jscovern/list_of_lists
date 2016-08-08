@@ -1,0 +1,2 @@
+class Miscellaneou < ApplicationRecord
+end
