@@ -1,0 +1,32 @@
+<div class="container"> 
+   <div class="row">
+       <div class="col-md-3">
+            <h2><%= @user.username %></h2>
+            <h3> <%= @user.first_name %> <%= @user.last_name %></h3>
+            <img src="<%= @user.img_url %>" width=100%>
+            <h3> <%= @user.bio %></h3> 
+        </div>
+        <div class="col-md-9">
+            <h2>My List of Lists listed in a list:</h2>
+            <% @user.lists.each do |list|%>
+            
+            <div class="row">
+            <div class="list">
+                <br />
+                <div class="col-md-3">
+                    <img src="<%=list.img_url%>" width=100%>   
+                </div>
+                <div class="col-md-9">
+                <a href="/lists/<%=list.id%>"><h3><%=list.title%></h3><hr></a>
+                <p><%=list.description%></p>
+                </div>    
+            </div>  
+            </div>
+            
+            <%end%>
+            
+        </div>
+        
+        
+    </div>
+</div>
