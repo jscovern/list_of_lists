@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808235857) do
+ActiveRecord::Schema.define(version: 20160809160604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.string   "img_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "list_id"
+    t.index ["list_id"], name: "index_books_on_list_id", using: :btree
   end
 
   create_table "followers", force: :cascade do |t|
@@ -31,6 +33,16 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.datetime "updated_at",   null: false
     t.index ["followers_id"], name: "index_followers_on_followers_id", using: :btree
     t.index ["user_id"], name: "index_followers_on_user_id", using: :btree
+  end
+
+  create_table "list_user", id: false, force: :cascade do |t|
+    t.integer "list_id", null: false
+    t.integer "user_id", null: false
+  end
+
+  create_table "list_users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "lists", force: :cascade do |t|
@@ -49,6 +61,8 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.string   "img_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "list_id"
+    t.index ["list_id"], name: "index_movies_on_list_id", using: :btree
   end
 
   create_table "places", force: :cascade do |t|
@@ -60,6 +74,8 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.string   "img_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "list_id"
+    t.index ["list_id"], name: "index_places_on_list_id", using: :btree
   end
 
   create_table "randos", force: :cascade do |t|
@@ -69,6 +85,8 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.string   "link_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "list_id"
+    t.index ["list_id"], name: "index_randos_on_list_id", using: :btree
   end
 
   create_table "songs", force: :cascade do |t|
@@ -79,6 +97,8 @@ ActiveRecord::Schema.define(version: 20160808235857) do
     t.string   "img_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "list_id"
+    t.index ["list_id"], name: "index_songs_on_list_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
