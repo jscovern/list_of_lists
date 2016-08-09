@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
+  get '/lists/:id', to: 'lists#show'
+
   get '/login', to: 'sessions#new', as: 'login'
   post '/sessions', to: 'sessions#create', as: 'sessions'
   delete '/sessions', to: 'sessions#destroy', as: 'destroy_session'
