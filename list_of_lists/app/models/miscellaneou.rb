@@ -1,2 +1,0 @@
-class Miscellaneou < ApplicationRecord
-end
