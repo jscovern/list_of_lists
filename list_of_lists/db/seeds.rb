@@ -18,8 +18,14 @@ List3 = List.create title: "Place you don't want to go with your mom", descripti
 List4 = List.create title: "When Kyle was searching for porn he found this:", description: "'I thought I wanted to look at naked women but really I wanted to look at puppies'", img_url: "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg", list_type: "rando"
 List5 = List.create title: "Songs Kyle listens to with Mom", description: "When mom and I go to Home Depot on Sunday we like to listen to Joni Mitchell and... ", img_url: "http://static.rogerebert.com/uploads/review/primary_image/reviews/thelma-and-louise-1991/hero_EB19910101REVIEWS40823002AR.jpg", list_type: "song"
 
-Book1 = Book.create title: "East of Eden", author: "John Steinbeck", description: "A coming of age story at any age", img_url: "http://www.steinbeck.org/assets/images/assets/617/large_east_of_EDEN_cover.jpg"
-Book2 = Book.create title: "Anna Karenina", author: "Leo Tolstoy", description: "She kills herself but it's complicated", img_url: "https://frisbeebookjournal.files.wordpress.com/2010/05/annakerinaml.jpg"
+Book1 = Book.create! title: "East of Eden", author: "John Steinbeck", description: "A coming of age story at any age", img_url: "http://www.steinbeck.org/assets/images/assets/617/large_east_of_EDEN_cover.jpg", list: List1
+Book2 = Book.create! title: "Anna Karenina", author: "Leo Tolstoy", description: "She kills herself but it's complicated", img_url: "https://frisbeebookjournal.files.wordpress.com/2010/05/annakerinaml.jpg", list: List1
+
+Movie1 = Movie.create! title: "Shawshank Redemption", director: "Frank Darabont", description: "Innocent man escapes from prison", img_url: "http://images.amcnetworks.com/ifc.com/wp-content/uploads/2014/05/shawshank-list.jpg", list: List2
+Movie2 = Movie.create! title: "Where the Wild Things Are", director: "Spike Jonz", description: "Monsters are friendly", img_url: "https://media2.giphy.com/media/WHdoZQuK0JXvW/200_s.gif", list: List2
+
+ListUser.create! list: List1, user: User1 
+ListUser.create! list: List2, user: User1
 # This file should contain all the record creation needed to seed the database with its default values.
 
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
