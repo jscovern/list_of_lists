@@ -24,8 +24,20 @@ Book2 = Book.create! title: "Anna Karenina", author: "Leo Tolstoy", description:
 Movie1 = Movie.create! title: "Shawshank Redemption", director: "Frank Darabont", description: "Innocent man escapes from prison", img_url: "http://images.amcnetworks.com/ifc.com/wp-content/uploads/2014/05/shawshank-list.jpg", list: List2
 Movie2 = Movie.create! title: "Where the Wild Things Are", director: "Spike Jonz", description: "Monsters are friendly", img_url: "https://media2.giphy.com/media/WHdoZQuK0JXvW/200_s.gif", list: List2
 
+Song1 = Song.create! title: "Baby Beluga", artist: "Raffi", album: "Baby Beluga", description: "Jamie's first concert. He laughed, cried and held his mom's hand.", img_url: "https://upload.wikimedia.org/wikipedia/en/3/35/Raffi_-_Baby_Beluga_cover_art.png", list: List5
+Song2 = Song.create! title: "All my friends", artist: "LCD Soundsystem", album: "Sound of Silver", description: "This song goes well with everything", img_url: "http://s3.amazonaws.com/rapgenius/lcdsoundsystem_sound_of_silver.jpeg", list: List5
+
+Place1 = Place.create! name: "Kennedy Dog Park", address: "970 East Hampden Ave.", latitude: 39.652305, longitude: -104.874027, description: "My dog humps all the dogs in this park. He's such a boss", img_url: "http://www.ovenbakedtradition.com/wp-content/uploads/2013/04/dog-humping1.jpg", list: List3
+Place2 = Place.create! name: "Holly's Apartment", address: "921 East 13th Ave", latitude: 39.737157, longitude: -104.975601, description: "This is where Holly lives.", img_url: "http://bedfordandbowery.com/wp-content/uploads/2013/10/MG_100044.jpg", list: List3 
+
+Rando1 = Rando.create! title: "Charlie The Unicorn", description: "This is the story of a unicorn losing his kidney", img_url: "http://3219a2.medialib.glogster.com/media/0b/0bd512f9edcec12f3249b34d491cd09e6c4e425928174d97153057d121f3fce4/4406868.jpg",link_url: "https://www.youtube.com/watch?v=Fu2DcHzokew", list: List4
+Rando2 = Rando.create! title: "Harvey Krumpet", description: "Harvey carves beauty from the wreckage of his terribly sad life.", img_url: "https://i.ytimg.com/vi/N0uV2jWMKvU/hqdefault.jpg", link_url: "https://www.youtube.com/watch?v=ouyVS6HOFeo", list: List4
+
 ListUser.create! list: List1, user: User1 
 ListUser.create! list: List2, user: User1
+ListUser.create! list: List3, user: User1
+ListUser.create! list: List4, user: User1
+ListUser.create! list: List5, user: User1
 # This file should contain all the record creation needed to seed the database with its default values.
 
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
