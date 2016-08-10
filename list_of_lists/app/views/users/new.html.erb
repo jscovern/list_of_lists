@@ -1,0 +1,27 @@
+<%=form_for @user do |f|%>
+	<div>
+		<%=f.text_field :first_name, placeholder: "First Name" %>
+	</div>
+	<div>
+		<%=f.text_field :last_name, placeholder: "Last Name"%>
+	</div>
+	<div>
+		<%=f.text_field :email, placeholder: "Email"%>
+	</div>
+	<div>
+		<%=f.text_field :username, placeholder: "Username"%>
+	</div>
+	<div>
+		<%=f.password_field :password, placeholder: "Password"%>
+	</div>
+	<div>
+		<%=f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+	</div>
+	<div>
+		<%=f.text_area :bio, placeholder: "Enter your Profile Bio" %>
+	</div>
+	<div>
+		<%=f.text_field :img_url, placeholder: "URL for your Profile Pic" %> 
+	</div>
+	<%= f.submit "Sign Up For Some Lists" %>
+<%end%>
