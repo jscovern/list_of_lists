@@ -29,7 +29,7 @@ class SongsController < ApplicationController
 
 private
 	def song_params
-		params.require(:song).permit(:title, :artist, :album, :description, :img_url, :list_id)
+		params.permit(:title, :artist, :album, :description, :img_url, :list_id)
 	end
 end
 

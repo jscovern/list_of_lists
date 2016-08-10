@@ -29,7 +29,7 @@ class RandosController < ApplicationController
 
 private
 	def rando_params
-		params.require(:rando).permit(:title, :description, :img_url, :link_url, :list_id)
+		params.permit(:title, :description, :img_url, :link_url, :list_id)
 	end
 end
 
