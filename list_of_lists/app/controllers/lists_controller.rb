@@ -7,7 +7,7 @@ class ListsController < ApplicationController
 
     def create
     	@list = List.create(list_params)
-    	redirect_to "/users/#{@current_user.id}"
+    	redirect_to "/lists/#{@current_user.id}"
     end
 
     def new
@@ -23,13 +23,13 @@ class ListsController < ApplicationController
     def update
     	@list = List.find_by_id(params[:id])
     	@list.update_attributes(list_params)
-    	redirect_to "/users/#{@current_user.id}"
+    	redirect_to "/lists/#{@current_user.id}"
     end
 
     def destroy
     	@list = List.find_by_id(params[:id])
     	@list.destroy
-    	redirect_to "/users/#{@current_user.id}"
+    	redirect_to "/lists/#{@current_user.id}"
 	end 
 
 private
