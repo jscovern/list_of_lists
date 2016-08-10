@@ -6,7 +6,8 @@
 	</div>
 	<div class="col-md-9">
 		<h3><strong><%= song.title %></strong>, <%= song.artist %></h3><hr>
-		<p><%= song.description %>
+		<p><%= song.description %></p>
+		<%= button_to "Delete", songs_destroy_path(song), method: :delete %>
 	</div>    
 </div>  
 

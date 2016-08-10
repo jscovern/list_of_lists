@@ -6,7 +6,8 @@
 	</div>
 	<div class="col-md-9">
 		<h3><strong><%= place.name %></strong></h3><hr>
-		<p><%= place.description %>
+		<p><%= place.description %></p>
+		<%= button_to "Delete", places_destroy_path(place), method: :delete %>
 	</div>    
 </div>  
 

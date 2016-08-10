@@ -6,7 +6,8 @@
 	</div>
 	<div class="col-md-9">
 		<h3><strong><%= book.title %></strong>, <%= book.author %></h3><hr>
-		<p><%= book.description %>
+		<p><%= book.description %></p>
+		<%= button_to "Delete", books_destroy_path(book), method: :delete %>
 	</div>    
 </div>  
 

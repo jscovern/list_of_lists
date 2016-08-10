@@ -19,6 +19,20 @@
                 <div class="col-md-9">
                 <a href="/lists/<%=list.id%>"><h3><%=list.title%></h3><hr></a>
                 <p><%=list.description%></p>
+                
+            
+                <% if @list.list_type == "book" %>
+                <%= button_to "Delete", books_destroy_path(@book), method: :delete %>
+                <% elsif @list.list_type == "movie" %>
+                <%= button_to "Delete", movies_destroy_path(@movie), method: :delete %>
+                <% elsif @list.list_type == "place" %>
+                <%= button_to "Delete", places_destroy_path(@place), method: :delete %>
+                <% elsif @list.list_type == "song" %>
+                <%= button_to "Delete", songs_destroy_path(@song), method: :delete %>
+                <% elsif @list.list_type == "rando" %>
+                <%= button_to "Delete", randos_destroy_path(@rando), method: :delete %>
+        
+        <% end %>
                 </div>    
             </div>  
             </div>
