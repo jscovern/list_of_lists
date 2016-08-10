@@ -35,6 +35,14 @@
             <div class="modal-body">
                 <% if @list.list_type == "book" %>
                 <%= render "addBook" %>
+                <% elsif @list.list_type == "movie" %>
+                <%= render "addMovie" %>
+                <% elsif @list.list_type == "place" %>
+                <%= render "addPlace" %>
+                <% elsif @list.list_type == "rando" %>
+                <%= render "addRando" %>
+                <% elsif @list.list_type == "song" %>
+                <%= render "addSong" %>
                 <% end %>
             </div>
             <div class="modal-footer">
