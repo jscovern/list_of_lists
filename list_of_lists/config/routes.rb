@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#destroy'
 
   get '/lists/:id', to: 'lists#show'
+  post '/lists', to: 'lists#create'
+  get '/lists/new', to: 'lists#new'
+  patch '/lists/:id', to: 'lists#update'
+  get '/lists/:id/edit', to: 'lists#edit'
+  delete '/lists/:id', to: 'lists#destroy'
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/sessions', to: 'sessions#create', as: 'sessions'
