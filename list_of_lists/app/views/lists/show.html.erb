@@ -1,17 +1,17 @@
 
 <div class="container"> 
-   <div class="row">
-       <div class="col-md-3">
-            <h2><%= @list.title %></h2>
-            <img src="<%= @list.img_url %>" width=100%>
-            <h3> <%= @list.description %></h3> 
-        </div>
+ <div class="row">
+     <div class="col-md-3">
+        <h2><%= @list.title %></h2>
+        <img src="<%= @list.img_url %>" width=100%>
+        <h3> <%= @list.description %></h3> 
+    </div>
 
-        
-        
 
-        <div class="col-md-9">
-        
+
+
+    <div class="col-md-9">
+
         <% if @list.list_type == "book" %>
         <%= render "book" %>
         <% elsif @list.list_type == "movie" %>
@@ -25,33 +25,32 @@
         
         <% end %>
 
-<div class="modal fade" id="myModalAddNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">What new item would you like to add?</h4>
-      </div>
-      <div class="modal-body">
-
-<!--          MODAL FORM-->
-           <!-- ADD A TEXT FIELD HERE PLEASE -->
-<!--            END MODAL FORM-->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save Item</button>
-      </div>
+        <div class="modal fade" id="myModalAddNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">What new item would you like to add?</h4>
+            </div>
+            <div class="modal-body">
+                <% if @list.list_type == "book" %>
+                <%= render "addBook" %>
+                <% end %>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save Item</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-        <br /> 
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
-            
-        </div>
-        
-        
-    </div>
+<br /> 
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
+
+</div>
+
+
+</div>
 </div>
