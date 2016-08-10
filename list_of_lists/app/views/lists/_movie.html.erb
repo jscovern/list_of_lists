@@ -1,0 +1,13 @@
+<% @list.movies.each do |movie|%>
+<div class="row list-item">
+	<br />
+	<div class="col-md-3">
+		<img src="<%= movie.img_url %>" width=100%>   
+	</div>
+	<div class="col-md-9">
+		<h3><strong><%= movie.title %></strong>, <%= movie.director %></h3><hr>
+		<p><%= movie.description %>
+	</div>    
+</div>  
+
+<%end%>
