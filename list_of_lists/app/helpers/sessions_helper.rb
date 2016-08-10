@@ -2,6 +2,8 @@ module SessionsHelper
 
     def login(user)
         session[:user_id] = user.id
+        session[:username] = user.username
+        session[:user_img_url] = user.img_url
         @current_user = user
     end
 
@@ -16,7 +18,7 @@ module SessionsHelper
     end
 
     def logout
-        @current_user = session[:user_id] = nil
+        @current_user = session[:user_id] = session[:username] = session[:user_img_url] = nil
     end
 
 end
