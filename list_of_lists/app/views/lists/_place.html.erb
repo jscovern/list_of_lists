@@ -1,0 +1,13 @@
+<% @list.places.each do |place|%>
+<div class="row list-item">
+	<br />
+	<div class="col-md-3">
+		<img src="<%= place.img_url %>" width=100%>   
+	</div>
+	<div class="col-md-9">
+		<h3><strong><%= place.name %></strong></h3><hr>
+		<p><%= place.description %>
+	</div>    
+</div>  
+
+<%end%>
