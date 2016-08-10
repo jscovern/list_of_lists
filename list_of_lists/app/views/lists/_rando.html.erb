@@ -6,7 +6,8 @@
 	</div>
 	<div class="col-md-9">
 		<h3><a href="<%= rando.link_url %>"><strong><%= rando.title %></strong></a></h3><hr>
-		<p><%= rando.description %>
+		<p><%= rando.description %></p>
+		 <%= button_to "Delete", randos_destroy_path(rando), method: :delete %>
 	</div>    
 </div>  
 

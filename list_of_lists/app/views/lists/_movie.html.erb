@@ -6,7 +6,8 @@
 	</div>
 	<div class="col-md-9">
 		<h3><strong><%= movie.title %></strong>, <%= movie.director %></h3><hr>
-		<p><%= movie.description %>
+		<p><%= movie.description %></p>
+		<%= button_to "Delete", movies_destroy_path(movie), method: :delete %>
 	</div>    
 </div>  
 
