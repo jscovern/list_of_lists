@@ -5,55 +5,23 @@
             <img src="<%= @list.img_url %>" width=100%>
             <h3> <%= @list.description %></h3> 
         </div>
+
+        
+        
+
         <div class="col-md-9">
-            <div class="list-item">
-                <br />
-                <div class="col-md-3">
-                    <img src="http://media.salon.com/2012/12/shutterstock_92369284.jpg" width=100%>   
-                </div>
-                <div class="col-md-9">
-                <h3>I'm a book</h3><hr>
-                <p><strong>Description</strong></p>
-                <p> These are a list of my movies that are listed in a list that I love the mostest! (smiley face) </p>
-                </div>    
-            </div>  
-            
-            
-            <div class="list">
-                <br />
-                <div class="col-md-3">
-                    <img src="http://media.salon.com/2012/12/shutterstock_92369284.jpg" width=100%>   
-                </div>
-                <div class="col-md-9">
-                <h3>He's a book</h3><hr>
-                <p><strong>Description</strong></p>
-                <p> These are a list of my movies that are listed in a list that I love the mostest! (smiley face) </p>
-                </div>    
-            </div>
-
-            <div class="list">
-                <br />
-                <div class="col-md-3">
-                    <img src="http://media.salon.com/2012/12/shutterstock_92369284.jpg" width=100%>   
-                </div>
-                <div class="col-md-9">
-                <h3>She's a book</h3><hr>
-                <p><strong>Description</strong></p>
-                <p> These are a list of my movies that are listed in a list that I love the mostest! (smiley face) </p>
-                </div>    
-            </div>
-
-            <div class="list">
-                <br />
-                <div class="col-md-3">
-                    <img src="http://media.salon.com/2012/12/shutterstock_92369284.jpg" width=100%>   
-                </div>
-                <div class="col-md-9">
-                <h3>We're all books, hey!</h3><hr>
-                <p><strong>Description</strong></p>
-                <p> These are a list of my movies that are listed in a list that I love the mostest! (smiley face) </p>
-                </div>    
-            </div>
+        
+        <% if @list.list_type == "book" %>
+        <%= render "book" %>
+        <% elsif @list.list_type == "movie" %>
+        <%= render "movie" %>
+        <% elsif @list.list_type == "place" %>
+        <%= render "place" %>
+        <% elsif @list.list_type == "song" %>
+        <%= render "song" %>
+        <% elsif @list.list_type == "rando" %>
+        <%= render "rando" %>
+        <% end %>
             
         </div>
         
