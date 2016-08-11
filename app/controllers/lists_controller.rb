@@ -33,7 +33,7 @@ class ListsController < ApplicationController
     def destroy
     	@list = List.find_by_id(params[:id])
     	@list.destroy
-    	redirect_to "/lists/#{@current_user.id}"
+    	redirect_to "/users/#{session[:user_id]}"
 	end 
 
 private
