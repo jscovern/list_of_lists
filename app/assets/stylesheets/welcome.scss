@@ -1,21 +1,20 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .background {
-	height: 100%;
-	width: 100%;
-	background-image: url(image_path('notebook.jpg'));
-	background-size: cover;	
+    height: 100%;
+    width: 100%;
+    background-image: url(image_path('notebook.jpg'));
+    background-size: cover;
 }
 
-.jumbotron{
-    background-color: rgba(255, 255, 255, 0.7) !important ;
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.7) !important;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	text-align: center;
+    text-align: center;
 }
 
 .wrapper {
@@ -24,5 +23,5 @@
 }
 
 #login-button {
-	margin: 1em;
+    margin: 1em;
 }
