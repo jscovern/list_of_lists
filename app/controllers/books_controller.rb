@@ -1,8 +1,14 @@
 class BooksController < ApplicationController
-
+    
 	def create
-    	@book = Book.create(book_params)
-    	redirect_to "/lists/#{@book.list_id}"
+    	@book = Book.new(book_params)
+        if @book.save
+            redirect_to "/lists/#{@book.list_id}"
+        else
+            flash[:error] = @book.errors.full_messages
+            temp = @book.errors.full_messages
+            render json: temp
+        end
     end
 
     def new

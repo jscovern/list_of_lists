@@ -1,8 +1,14 @@
 class MoviesController < ApplicationController
 
 	def create
-    	@movie = Movie.create(movie_params)
-    	redirect_to "/lists/#{@movie.list_id}"
+        @movie = Movie.new(movie_params)
+        if @movie.save
+            redirect_to "/lists/#{@movie.list_id}"
+        else
+            flash[:error] = @movie.errors.full_messages
+            temp = @movie.errors.full_messages
+            render json: temp
+        end
     end
 
     def new

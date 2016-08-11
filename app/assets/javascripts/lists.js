@@ -2,54 +2,86 @@ $(document).ready(function(){
 
 console.log("it worked");
 
+$("#addItem").on('click', function(event) {
+	$("#modalerror").text("");
+	$("#modalerror").addClass('hidden');	
+});
 
-$("#add-book-button").on('click', function(event){
+$(document).on('click','#add-book-button', function(event){
 	event.preventDefault();
 	var book = $('#add-book-form').serialize();
 	$.ajax({
 		url: '/books',
 		type: "POST",
-		data: book
+		data: book,
+		success: function(data) {
+			$("#modalerror").removeClass('hidden');			
+			$("#modalerror").text(data);
+		},
+		error: function(error) {
+			console.log('in the error');
+		}
 	});
 });
 
-$("#add-movie-button").on('click', function(event){
+$("#addList").on('click', function(event) {
+	$("#new-list-error").text("");
+	$("#new-list-error").addClass('hidden');		
+});
+
+$(document).on('click','#add-movie-button', function(event){
 	event.preventDefault();
 	var movie = $('#add-movie-form').serialize();
 	$.ajax({
 		url: '/movies',
 		type: "POST",
-		data: movie
+		data: movie,
+		success: function(data) {
+			$("#modalerror").text(data);
+			$("#modalerror").removeClass('hidden');			
+		}
 	});
 });
 
-$("#add-place-button").on('click', function(event){
+$(document).on('click','#add-place-button', function(event){
 	event.preventDefault();
 	var place = $('#add-place-form').serialize();
 	$.ajax({
 		url: '/places',
 		type: "POST",
-		data: place
+		data: place,
+		success: function(data) {
+			$("#modalerror").text(data);
+			$("#modalerror").removeClass('hidden');			
+		}
 	});
 });
 
-$("#add-rando-button").on('click', function(event){
+$(document).on('click','#add-rando-button', function(event){
 	event.preventDefault();
 	var rando = $('#add-rando-form').serialize();
 	$.ajax({
 		url: '/randos',
 		type: "POST",
-		data: rando
+		data: rando,
+		success: function(data) {
+			$("#modalerror").text(data);
+			$("#modalerror").removeClass('hidden');			
+		}
 	});
 });
 
-$("#add-song-button").on('click', function(event){
+$(document).on('click','#add-song-button', function(event){
 	event.preventDefault();
 	var song = $('#add-song-form').serialize();
 	$.ajax({
 		url: '/songs',
 		type: "POST",
-		data: song
+		data: song,
+		success: function(data) {
+			$("#modalerror").text(data);
+			$("#modalerror").removeClass('hidden');			
+		}
 	});
 });
 
