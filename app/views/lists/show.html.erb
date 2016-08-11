@@ -31,6 +31,7 @@
                 <h4 class="modal-title" id="myModalLabel">What new item would you like to add?</h4>
             </div>
             <div class="modal-body">
+                <div id="modalerror" class="alert alert-info hidden" role="alert"></div>
                 <% if @list.list_type == "book" %>
                 <%= render "addBook" %>
                 <% elsif @list.list_type == "movie" %>
@@ -53,7 +54,7 @@
 
 <br /> 
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
+  <button type="button" id="addItem" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
 
 </div>
 

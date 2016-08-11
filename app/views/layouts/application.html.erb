@@ -34,7 +34,7 @@
         <% if session[:user_id] != nil %>
           <li><%= link_to session[:username], users_show_path(session[:user_id]), method: :get %></li>
           <li><%= link_to "Logout", destroy_session_path, method: :delete %></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">New List</a></li>
+          <li><a id="addList" href="#" data-toggle="modal" data-target="#myModal">New List</a></li>
         <% end %>
         <li><a href="/about">About</a></li>
       </ul>
@@ -51,7 +51,7 @@
         <h4 class="modal-title" id="myModalLabel">What kind of list would you like to create?</h4>
       </div>
       <div class="modal-body">
-
+      <div id = "new-list-error" class="alert alert-info hidden" role="alert"></div>
 <!--          MODAL FORM-->
             <form id="new-list-form">
             <div class="form-group">

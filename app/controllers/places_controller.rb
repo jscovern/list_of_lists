@@ -1,8 +1,14 @@
 class PlacesController < ApplicationController
 	
 	def create
-    	@place = Place.create(place_params)
-    	redirect_to "/lists/#{@place.list_id}"
+        @place = Place.new(place_params)
+        if @place.save
+            redirect_to "/lists/#{@place.list_id}"
+        else
+            flash[:error] = @place.errors.full_messages
+            temp = @place.errors.full_messages
+            render json: temp
+        end
     end
 
     def new

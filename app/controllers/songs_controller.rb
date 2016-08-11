@@ -1,8 +1,14 @@
 class SongsController < ApplicationController
 
 	def create
-    	@song = Song.create(song_params)
-    	redirect_to "/lists/#{@song.list_id}"
+        @song = Song.new(song_params)
+        if @song.save
+            redirect_to "/lists/#{@song.list_id}"
+        else
+            flash[:error] = @song.errors.full_messages
+            temp = @song.errors.full_messages
+            render json: temp
+        end
     end
 
     def new

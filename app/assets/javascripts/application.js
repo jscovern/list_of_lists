@@ -24,7 +24,11 @@ $("#new-list").on('click', function(event){
 	$.ajax({
 		url: '/lists',
 		type: "POST",
-		data: list
+		data: list,
+		success: function(data) {
+			$("#new-list-error").text(data);
+			$("#new-list-error").removeClass('hidden');
+		},
 	});
 });
 

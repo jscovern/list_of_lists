@@ -1,8 +1,14 @@
 class RandosController < ApplicationController
 
 	def create
-    	@rando = Rando.create(rando_params)
-    	redirect_to "/lists/#{@rando.list_id}"
+        @rando = Rando.new(rando_params)
+        if @rando.save
+            redirect_to "/lists/#{@rando.list_id}"
+        else
+            flash[:error] = @rando.errors.full_messages
+            temp = @rando.errors.full_messages
+            render json: temp
+        end
     end
 
     def new
