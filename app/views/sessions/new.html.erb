@@ -1,11 +1,15 @@
+<div class="container">
 <h1>Sign in to List of Lists</h1>
-
+<br />
 <%=form_for @user, url:'/sessions', method: 'post' do |f| %>
 	<div>
 		<%=f.text_field :username, placeholder: "Username" %>
 	</div>
+	<br />
 	<div>
 		<%=f.password_field :password, placeholder: "Password" %>
 	</div>
+	<br />
 	<%=f.submit "List me" %>
 <%end%>
+</div>
