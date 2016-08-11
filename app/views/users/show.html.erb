@@ -17,11 +17,11 @@
                     <img src="<%=list.img_url%>" width=100%>   
                 </div>
                 <div class="col-md-9">
-                <a href="/lists/<%=list.id%>"><h3><%=list.title%></h3><hr></a>
-                <p><%=list.description%></p>
-                
-            
-               
+                    <a href="/lists/<%=list.id%>"><h3><%=list.title%></h3><hr></a>
+                    <p><%=list.description%></p>
+                    <% if session[:user_id] == @user.id %>
+                        <%= button_to "Delete", lists_destroy_path(list), method: :delete %>
+                    <% end %>
                 </div>    
             </div>  
             </div>
