@@ -6,8 +6,12 @@ class ListsController < ApplicationController
     end
 
     def create
-    	@list = List.create(list_params)
-    	redirect_to "/lists/#{@current_user.id}"
+    	@list = List.new(list_params)
+        # @user_id = session[:user_id].to_i
+        p "this is the current user #{@current_user}"
+        @list.save
+        @list.users << current_user
+    	redirect_to "/lists/#{@list.id}"
     end
 
     def new
@@ -34,6 +38,6 @@ class ListsController < ApplicationController
 
 private
 	def list_params
-		params.require(:list).permit(:title, :description, :img_url, :list_type)
+		params.permit(:title, :description, :img_url, :list_type)
 	end
 end
