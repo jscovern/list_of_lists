@@ -51,27 +51,30 @@
         <h4 class="modal-title" id="myModalLabel">What kind of list would you like to create?</h4>
       </div>
       <div class="modal-body">
-<!--       MODAL BUTTONS-->
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Songs</button>
-          <button type="button" class="btn btn-default">Books</button>
-          <button type="button" class="btn btn-default">Movies</button>
-          <button type="button" class="btn btn-default">Links</button>
-          <button type="button" class="btn btn-default">Places</button>
-        </div>
-          <br />
-          <br />
-<!--          END MODAL BUTTONS-->
 
 <!--          MODAL FORM-->
-           <input type="text" class="form-control" placeholder="Title">
-           <br />
-            <textarea class="form-control" rows="3" placeholder="Description"></textarea>
+            <form id="new-list-form">
+            <div class="form-group">
+            <select class="form-control" name="list_type">
+              <option>book</option>
+              <option>movie</option>
+              <option>place</option>
+              <option>rando</option>
+              <option>song</option>
+            </select>
+            </div>
+            <div class="form-group">
+           <input type="text" class="form-control" placeholder="Title" name="title">
+           </div>
+           <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Description" name="description"></textarea>
+            </div>
+             <div class="form-group">
+            <input type="text" class="form-control" placeholder="Image URL" name="img_url">
+            </div>
+            <button id="new-list" type="submit" class="btn btn-primary">New List</button>
+            </form>
 <!--            END MODAL FORM-->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save List</button>
       </div>
     </div>
   </div>

@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+
+$("#new-list").on('click', function(event){
+	event.preventDefault();
+	var list = $('#new-list-form').serialize();
+	$.ajax({
+		url: '/lists',
+		type: "POST",
+		data: list
+	});
+});
+
+});
