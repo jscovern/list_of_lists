@@ -55,6 +55,5 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create', as: 'sessions'
   delete '/sessions', to: 'sessions#destroy', as: 'destroy_session'
   
-  
-
+  get '/about', to: "about#index"
 end

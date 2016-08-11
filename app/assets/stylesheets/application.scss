@@ -18,7 +18,10 @@
 @import "bootstrap";
 
 
-html,body{height:100%;}
+html,body{
+    height:100%;
+ 
+}
 
 .modal-body{
     text-align: center;
@@ -27,3 +30,4 @@ html,body{height:100%;}
 .modal-title{
     text-align: center;
 }
+
