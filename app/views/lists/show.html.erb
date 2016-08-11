@@ -1,10 +1,10 @@
 
 <div class="container"> 
    <div class="row">
-       <div class="col-md-3">
+       <div class="sidebar col-md-3">
         <h2><%= @list.title %></h2>
-        <img src="<%= @list.img_url %>" width=100%>
-        <h3> <%= @list.description %></h3> 
+        <img class="sidebar-image" src="<%= @list.img_url %>" width=100%>
+        <p class="lead"> <%= @list.description %></p> 
     </div>
 
 
@@ -26,7 +26,7 @@
         <div class="btn-group" role="group" aria-label="...">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
 
-        </div> 
+        </div>      
         <% end %>
     </div>
 </div>
