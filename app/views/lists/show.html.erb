@@ -23,7 +23,14 @@
         
         <% end %>
 
-        <div class="modal fade" id="myModalAddNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
+
+      </div> 
+    </div>
+</div>
+
+ <div class="modal fade" id="myModalAddNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -44,19 +51,12 @@
                 <%= render "addSong" %>
                 <% end %>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save Item</button>
-            </div>
         </div>
-    </div>
-</div>
 
 <br /> 
 <div class="btn-group" role="group" aria-label="...">
   <button type="button" id="addItem" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddNewItem">Add New Item to Your List</button>
 
-</div>
 
 
 </div>

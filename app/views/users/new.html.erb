@@ -1,37 +1,50 @@
-<div class="container">
-<%=form_for @user do |f|%>
-	<div>
-		<%=f.text_field :first_name, placeholder: "First Name" %>
-	</div>
-	<br />
-	<div>
-		<%=f.text_field :last_name, placeholder: "Last Name"%>
-	</div>
-	<br />
-	<div>
-		<%=f.text_field :email, placeholder: "Email"%>
-	</div>
-	<br />
-	<div>
-		<%=f.text_field :username, placeholder: "Username"%>
-	</div>
-	<br />
-	<div>
-		<%=f.password_field :password, placeholder: "Password"%>
-	</div>
-	<br />
-	<div>
-		<%=f.password_field :password_confirmation, placeholder: "Confirm Password" %>
-	</div>
-	<br />
-	<div>
-		<%=f.text_area :bio, placeholder: "Enter your Profile Bio" %>
-	</div>
-	<br />
-	<div>
-		<%=f.text_field :img_url, placeholder: "URL for your Profile Pic" %> 
-	</div>
-	<br />
-	<%= f.submit "Sign Up For Some Lists" %>
-<%end%>
+
+<div class="background">
+    <div class="wrapper">
+        <div class="jumbotron">
+	        <div class="container">
+	            <h1>Sign up to List of Lists</h1>
+                    <br />
+<!--                       SIGN UP FORM-->
+                       <div class="col-md-4 col-md-offset-4">
+                        <%=form_for @user do |f|%>
+                            <div class="form-group">
+                                <%=f.text_field :first_name, placeholder: "First Name", class: 'form-control' %>
+                            </div>
+                           
+                            <div class="form-group">
+                                <%=f.text_field :last_name, placeholder: "Last Name", class: 'form-control'%>
+                            </div>
+                         
+                            <div class="form-group">
+                                <%=f.text_field :email, placeholder: "Email", class: 'form-control'%>
+                            </div>
+                         
+                            <div class="form-group">
+                                <%=f.text_field :username, placeholder: "Username", class: 'form-control'%>
+                            </div>
+                           
+                            <div class="form-group">
+                                <%=f.password_field :password, placeholder: "Password", class: 'form-control'%>
+                            </div>
+                         
+                            <div class="form-group">
+                                <%=f.password_field :password_confirmation, placeholder: "Confirm Password", class: 'form-control' %>
+                            </div>
+                       
+                            <div class="form-group">
+                                <%=f.text_area :bio, placeholder: "Enter your Profile Bio", class: 'form-control' %>
+                            </div>
+                            
+                            <div class="form-group">
+                                <%=f.text_field :img_url, placeholder: "URL for your Profile Pic", class: 'form-control' %> 
+                            </div>
+                             <div class="form-group"> 
+                            <%= f.submit "Sign Up For Some Lists Bro!", class: "btn btn-primary" %>
+                           </div>
+                        <%end%>
+                     </div>
+            </div>	
+	    </div>
+    </div>
 </div>
