@@ -3,6 +3,7 @@
    <div class="row">
        <div class="sidebar col-md-3">
         <h2><%= @list.title %></h2>
+        <h4>A list by <a href="/users/<%= @list.users[0].id %>"><%= @list.users[0].username %></a></h4>
         <img class="sidebar-image" src="<%= @list.img_url %>" width=100%>
         <p class="lead"> <%= @list.description %></p> 
     </div>
