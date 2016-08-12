@@ -35,6 +35,13 @@
           <li><%= link_to session[:username], users_show_path(session[:user_id]), method: :get %></li>
           <li><%= link_to "Logout", destroy_session_path, method: :delete %></li>
           <li><a id="addList" href="#" data-toggle="modal" data-target="#myModal">New List</a></li>
+          <form action="/username" method="get"
+        class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input name= "username" type="text" class="form-control" placeholder="username">
+        </div>
+        <input type="submit" class="btn btn-default" value="Search">
+      </form>
         <% end %>
         <li><a href="/about">About</a></li>
       </ul>
