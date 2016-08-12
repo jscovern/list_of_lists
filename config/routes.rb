@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: "users_show"
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy', as: "users_destroy"
+  get '/username', to: 'users#search'
 
   get '/lists/:id', to: 'lists#show'
   post '/lists', to: 'lists#create'
