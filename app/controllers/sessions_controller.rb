@@ -8,7 +8,7 @@ def create
 	@user = User.confirm(user_params)
 	if @user 
 		login(@user)
-		redirect_to "/users/#{@user.id}"
+		redirect_to "/"
 	else 
 		redirect_to '/login'
 		p "this is the user: #{@user}"
