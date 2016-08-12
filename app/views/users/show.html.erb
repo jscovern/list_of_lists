@@ -5,6 +5,8 @@
             <h4> <%= @user.first_name %> <%= @user.last_name %></h4>
             <img class="sidebar-image" src="<%= @user.img_url %>" width=100%>
             <p class="lead"> <%= @user.bio %></p> 
+            <!-- <button id="follower" type="submit" class="btn btn-primary">Follow</button> -->
+            <%= button_to "Follow", followings_create_path, method: :post, params: {follower_id: session[:user_id], user_id: @user.id} %>
         </div>
         <div class="col-md-9">
             <h2>My List of Lists listed in a list:</h2>

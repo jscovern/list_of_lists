@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#destroy', as: "users_destroy"
   get '/username', to: 'users#search'
 
+  post '/followings', to: 'followings#create', as: 'followings_create'
+
   get '/lists/:id', to: 'lists#show'
   post '/lists', to: 'lists#create'
   get '/lists/new', to: 'lists#new'
