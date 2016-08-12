@@ -10,6 +10,9 @@
                 </div>
                 <div class="col-md-9">
                     <a href="/lists/<%=list.id%>"><h3><%=list.title%></h3><hr></a>
+                    <% if list.users.length > 0 %>
+                    <h4>A list by <a href="/users/<%= list.users[0].id %>"><%= list.users[0].username %></a></h4>
+                    <% end %>
                     <p class="lead"><%=list.description%></p>
                 </div>    
             </div>  
