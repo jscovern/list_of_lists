@@ -42,6 +42,7 @@ ListUser.create! list: List5, user: User1
 Following.create! user_id: User1.id, follower_id: User2.id
 Following.create! user_id: User1.id, follower_id: User3.id
 Following.create! user_id: User2.id, follower_id: User1.id
+Following.create! user_id: User3.id, follower_id: User1.id
 
 
 # This file should contain all the record creation needed to seed the database with its default values.
