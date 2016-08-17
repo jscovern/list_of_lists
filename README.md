@@ -6,9 +6,13 @@ List of Lists is a web application that allows users to curate and share lists v
 Technologies used:
 
 -Ruby and Rails
+
 -Ajax and JQuery
+
 -Bootstrap, CSS and JS
+
 -PostreSQL & Active Record
+
 -Heroku (for deployment)
 
 Link to Heroku: https://list-of-lists.herokuapp.com/
