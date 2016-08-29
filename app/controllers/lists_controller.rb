@@ -9,11 +9,9 @@ class ListsController < ApplicationController
             # binding.pry
     	   @list = List.new(list_params)
         if @list.save
-            p "in the list.save"
             @list.users << current_user
     	   redirect_to "/lists/#{@list.id}"
         else
-            p "in the list.save else"
             temp = @list.errors.full_messages
             render json: temp
         end

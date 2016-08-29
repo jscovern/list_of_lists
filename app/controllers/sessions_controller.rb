@@ -11,7 +11,6 @@ def create
 		redirect_to "/"
 	else 
 		redirect_to '/login'
-		p "this is the user: #{@user}"
 		flash[:error] = "This username password combination does not exist"
 	end
 end

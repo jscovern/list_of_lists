@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-console.log("it worked");
-
 $("#addItem").on('click', function(event) {
 	$("#modalerror").text("");
 	$("#modalerror").addClass('hidden');	
@@ -19,7 +17,6 @@ $(document).on('click','#add-book-button', function(event){
 			$("#modalerror").text(data);
 		},
 		error: function(error) {
-			console.log('in the error');
 		}
 	});
 });

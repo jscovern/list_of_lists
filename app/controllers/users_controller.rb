@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     def search
       @username = params[:username].downcase
       @users = User.where("username LIKE ?", "%#{@username}%").to_a
-      p "the username is #{@username} and the results are #{@users}"
       render :search
     end  
 
